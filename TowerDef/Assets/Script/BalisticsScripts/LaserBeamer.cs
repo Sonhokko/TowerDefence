@@ -10,17 +10,12 @@ public class LaserBeamer : TurretBase
     private float slowPercent = .5f;
 
 
-    private void Start()
+    protected override void Start()
     {
-        InvokeRepeating("UpdateTarget", 0f, 0.5f);
+        base.Start();
     }
 
-    protected override void UpdateTarget()
-    {
-        base.UpdateTarget();
-    }
-
-    private void Update()
+    protected override void Update()
     {
         if (target == null)
         {
@@ -31,13 +26,13 @@ public class LaserBeamer : TurretBase
         }
         else
         {
-            ShootLaser();
+            Shoot();
         }
 
         TurretRotate();
     }
 
-    private void ShootLaser()
+    protected override void Shoot()
     {
         targetEnemy.TakeDamage(damageOverTime * Time.deltaTime);
         targetEnemy.Slow(slowPercent);
@@ -56,7 +51,5 @@ public class LaserBeamer : TurretBase
         impactEffect.transform.position = target.position;
         impactEffect.transform.rotation = Quaternion.LookRotation(dir);
     }
-
-
 
 }

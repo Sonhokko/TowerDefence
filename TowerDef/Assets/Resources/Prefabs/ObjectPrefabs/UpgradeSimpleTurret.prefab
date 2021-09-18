@@ -154,7 +154,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2581411786203359047}
-  - component: {fileID: 3885497160972671211}
+  - component: {fileID: 4430961402507520038}
   m_Layer: 0
   m_Name: UpgradeSimpleTurret
   m_TagString: Untagged
@@ -178,7 +178,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3885497160972671211
+--- !u!114 &4430961402507520038
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -187,14 +187,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 2581411786203359045}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c0411b7ff2980b48add5ccd32f5b73a, type: 3}
+  m_Script: {fileID: 11500000, guid: 0204541e96ff8444488d1d843f6897d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firePoint: {fileID: 2581411785377600119}
+  firePoint: {fileID: 2581411785519895346}
   partToRotate: {fileID: 2581411785779286802}
   bulletPref: {fileID: 3982152471821959257, guid: 6575429d90ad3254bbd2ef476f187fd5, type: 3}
   range: 15
   turnSpeed: 10
+  fireDelay: 1
 --- !u!1 &2581411786968819025
 GameObject:
   m_ObjectHideFlags: 0

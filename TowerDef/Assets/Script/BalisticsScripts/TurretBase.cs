@@ -10,13 +10,28 @@ public abstract class TurretBase : MonoBehaviour
     [SerializeField] protected GameObject bulletPref;
     [SerializeField] protected float range;
     [SerializeField] protected float turnSpeed;
+    [SerializeField] protected float fireDelay;
     private IEnumerator fireDelayIE = null;
-    protected float fireDelay;
 
     protected Transform target;
     protected Enemy targetEnemy;
     private const string enemyTag = "Enemy";
 
+
+    protected virtual void Start()
+    {
+        InvokeRepeating("UpdateTarget", 0f, 0.5f);
+    }
+
+    protected virtual void Update()
+    {
+        if (target == null)
+            return;
+        else
+            Shoot();
+
+        TurretRotate();
+    }
 
     protected virtual void UpdateTarget()
     {

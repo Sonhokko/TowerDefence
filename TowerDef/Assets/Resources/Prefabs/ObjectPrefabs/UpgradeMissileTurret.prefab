@@ -71,7 +71,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5792934898409701712}
-  - component: {fileID: 7290284224300281907}
+  - component: {fileID: 5059440975288050563}
   m_Layer: 0
   m_Name: UpgradeMissileTurret
   m_TagString: Untagged
@@ -95,7 +95,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7290284224300281907
+--- !u!114 &5059440975288050563
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -104,14 +104,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 5792934898409610608}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26bc42e207180ff4fab57a4a8e9c82ec, type: 3}
+  m_Script: {fileID: 11500000, guid: 0204541e96ff8444488d1d843f6897d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   firePoint: {fileID: 7448798727690789083}
   partToRotate: {fileID: 7125780912788524543}
   bulletPref: {fileID: 1193415867141073510, guid: a45c795744121b44fb171b1e3b1588aa, type: 3}
-  range: 17
+  range: 30
   turnSpeed: 10
+  fireDelay: 2
 --- !u!1 &5792934898409610612
 GameObject:
   m_ObjectHideFlags: 0

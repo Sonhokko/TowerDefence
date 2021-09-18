@@ -6,6 +6,7 @@ using System;
 public class WaveSpawner : MonoBehaviour
 {
     [SerializeField] private GameManager gameManager;
+    [SerializeField] private Transform enemiesParent;
     [SerializeField] private Wave[] waves;
     [SerializeField] private Transform spawnPoint;
     [SerializeField] private Text waveCountdown;
@@ -55,7 +56,7 @@ public class WaveSpawner : MonoBehaviour
 
     private void SpawnEnemy(GameObject enemy)
     {
-        Instantiate(enemy, spawnPoint.position, spawnPoint.rotation);
+        Instantiate(enemy, spawnPoint.position, spawnPoint.rotation, enemiesParent);
     }
 
 
