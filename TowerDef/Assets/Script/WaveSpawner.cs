@@ -5,6 +5,7 @@ using System;
 
 public class WaveSpawner : MonoBehaviour
 {
+    [SerializeField] private GameManager gameManager;
     [SerializeField] private Wave[] waves;
     [SerializeField] private Transform spawnPoint;
     [SerializeField] private Text waveCountdown;
@@ -35,6 +36,7 @@ public class WaveSpawner : MonoBehaviour
     {
         PlayerStats.Rounds++;
         Wave wave = waves[waveIndex];
+        EnemiesAlive = wave.count;
 
         for(int i = 0; i < wave.count; i++)
         {
@@ -46,7 +48,7 @@ public class WaveSpawner : MonoBehaviour
 
         if (waveIndex == waves.Length)
         {
-            Debug.Log("Level complite");
+            gameManager.WinLevel();
             this.enabled = false;
         }
     }
@@ -54,7 +56,6 @@ public class WaveSpawner : MonoBehaviour
     private void SpawnEnemy(GameObject enemy)
     {
         Instantiate(enemy, spawnPoint.position, spawnPoint.rotation);
-        EnemiesAlive++;
     }
 
 
