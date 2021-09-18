@@ -22,5 +22,10 @@ C#
 
 ## Screenshots
 
-![](scrn1.jpg)
-![](scrn2.jpg)
+![](scrn1.png)
+![](scrn2.png)
+![](scrn3.png)
+![](scrn4.png)
+![](scrn5.png)
+![](scrn6.png)
+
